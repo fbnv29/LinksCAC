@@ -1,0 +1,190 @@
+:root {
+    /* Colores extraídos aproximados del estilo "CAC" */
+    --gradient-start: #b20a59;
+    /* Magenta intenso */
+    --gradient-end: #ef5da8;
+    /* Rosado más claro/Naranja sutil en mezcla */
+    --bg-gradient: linear-gradient(135deg, #b3125a 0%, #e85d4e 100%);
+    /* Degradado Magenta a Naranja Lavado */
+
+    --text-color: #ffffff;
+    --button-border: #ffffff;
+    --button-bg-hover: #ffffff;
+    --text-color-hover: #b3125a;
+    /* Color magenta para texto al hacer hover */
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Asegurar que el fondo cubra todo */
+    background-attachment: fixed;
+}
+
+header {
+    margin-bottom: 50px;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    /* Texto muy grande */
+    color: var(--text-color);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /* Espaciado amplio como en el poster */
+    font-weight: 800;
+    /* Extra bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.1;
+}
+
+#links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.link-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Ligeramente transparente */
+    border: 4px solid var(--button-border);
+    border-radius: 50px;
+    /* Bordes muy redondeados estilo "pill" */
+    width: 280px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    /* Efecto cristal sutil */
+}
+
+.link-button:hover,
+.link-button:focus {
+    transform: translateY(-5px);
+    background-color: var(--button-bg-hover);
+    color: var(--text-color-hover);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Iconos FontAwesome */
+.link-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.link-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilos para tarjetas de información (no clickeables) */
+.info-card {
+    background-color: rgba(255, 255, 255, 0.25);
+    /* Más opaco para destacar como info fija */
+    border: 4px dashed rgba(255, 255, 255, 0.6);
+    /* Borde punteado para diferenciar */
+    border-radius: 40px;
+    width: 280px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    cursor: default;
+    /* No mostrar mano */
+    pointer-events: none;
+    /* No interactivo */
+}
+
+/* Título recordatorio más pequeño */
+.info-card .link-title {
+    font-size: 1.4rem;
+}
+
+.info-card .subtitle {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: 500;
+    text-transform: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* High contrast preference support override - mantiene legibilidad básica si se fuerza */
+@media (prefers-contrast: more) {
+    :root {
+        --bg-gradient: #ffffff;
+        --text-color: #000000;
+        --button-border: #000000;
+        --text-color-hover: #ffffff;
+        --button-bg-hover: #000000;
+    }
+
+    body {
+        background: var(--bg-gradient);
+    }
+
+    .link-button {
+        background-color: #f0f0f0;
+        color: #000000;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .link-button {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 120px;
+        border-radius: 30px;
+        flex-direction: row;
+        /* En móviles, icono al lado del texto para ahorrar espacio vertical */
+        justify-content: flex-start;
+        padding: 20px 30px;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .link-icon {
+        margin-bottom: 0;
+        font-size: 2.5rem;
+    }
+
+    .link-title {
+        font-size: 1.5rem;
+    }
+}
