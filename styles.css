@@ -165,7 +165,8 @@ h1 {
         font-size: 2.5rem;
     }
 
-    .link-button {
+    .link-button,
+    .info-card {
         width: 100%;
         max-width: 350px;
         height: auto;

@@ -16,6 +16,13 @@ const items = [
         iconClass: "fa-solid fa-user-slash"
     },
     {
+        type: 'link',
+        title: "Situación Militar",
+        subtitle: "Certificado DGMN",
+        url: "https://dgmn.cerofilas.gob.cl/login/claveunica?redirect=https://dgmn.cerofilas.gob.cl/tramites/iniciar/2959",
+        iconClass: "fa-solid fa-person-military-rifle"
+    },
+    {
         type: 'info',
         title: "Curriculum",
         subtitle: "Recuerda enviar actualizado",
