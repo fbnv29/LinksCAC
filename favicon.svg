@@ -5,33 +5,12 @@
       <stop offset="100%" style="stop-color:#e85d4e;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <!-- Network / Hub Icon -->
-  <g fill="url(#grad1)">
-    <!-- Central Node -->
-    <circle cx="256" cy="256" r="60" />
+  
+  <g fill="none" stroke="url(#grad1)" stroke-width="70" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Vertical Link Part -->
+    <rect x="116" y="96" width="120" height="220" rx="60"  />
     
-    <!-- Top Node -->
-    <circle cx="256" cy="96" r="45" />
-    <!-- Line Center to Top -->
-    <path d="M256 141 L256 196" stroke="url(#grad1)" stroke-width="30" stroke-linecap="round" />
-
-    <!-- Bottom Left Node -->
-    <circle cx="117" cy="376" r="45" />
-    <!-- Line Center to Bottom Left -->
-    <path d="M149 344 L204 289" stroke="url(#grad1)" stroke-width="30" stroke-linecap="round" />
-
-    <!-- Bottom Right Node -->
-    <circle cx="395" cy="376" r="45" />
-    <!-- Line Center to Bottom Right -->
-    <path d="M363 344 L308 289" stroke="url(#grad1)" stroke-width="30" stroke-linecap="round" />
-    
-    <!-- Extra "Data" Nodes for density (Collection feel) -->
-    <!-- Left Node -->
-    <circle cx="96" cy="256" r="35" />
-    <path d="M131 256 L196 256" stroke="url(#grad1)" stroke-width="25" stroke-linecap="round" />
-
-    <!-- Right Node -->
-    <circle cx="416" cy="256" r="35" />
-    <path d="M381 256 L316 256" stroke="url(#grad1)" stroke-width="25" stroke-linecap="round" />
+    <!-- Horizontal Link Part (Interlocking/Fused) -->
+    <rect x="176" y="236" width="220" height="120" rx="60" />
   </g>
 </svg>
