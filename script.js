@@ -26,7 +26,7 @@ const items = [
         type: 'info',
         title: "Curriculum",
         subtitle: "Recuerda enviar actualizado",
-        iconClass: "fa-solid fa-file-user"
+        iconClass: "fa-solid fa-file-lines"
     },
     {
         type: 'info',
